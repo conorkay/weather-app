@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <header><h1>To-Do</h1></header>
+
+    <!-- Overlay and form for creating a new task/project-->
+    <div id="ovrly"></div>
+    <div id="form-container">
+      <button id="cross">&cross;</button>
+      <h2>New Task</h2>
+      <form id="form">
+        <input
+          required
+          type="text"
+          placeholder="Title: Walk the dog"
+          class="text"
+          id="title"
+          name="title"
+        />
+        <input
+          type="text"
+          placeholder="Details: Outside"
+          name="details"
+          id="details"
+        />
+        <input type="button" value="Create Task" />
+      </form>
+    </div>
+
+    <!-- The main grid-->
+    <div class="grid-container">
+      <div class="sidebar">
+        <button id="openFormBtn">+ Task</button>
+      </div>
+
+      <!-- Flex containter that holds the to-do items-->
+      <div id="list-container"></div>
+    </div>
+  <script defer src="runtime.bundle.js"></script><script defer src="app.bundle.js"></script></body>
+</html>
