@@ -1,0 +1,30 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: #dedede;
+  color: #5a6674;
+  overflow: hidden;
+}
+
+button {
+  width: 5em;
+  height: 2em;
+}
+
+#searchBar {
+  margin: auto;
+  padding: 1.5em;
+  justify-content: center;
+  max-width: 30em;
+  border-radius: 40px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  /* transform: translate(-50%, -50%); */
+  background: #fff;
+  transition: all 0.3s ease;
+}
