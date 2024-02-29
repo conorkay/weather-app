@@ -10,6 +10,11 @@ body {
   background: #dedede;
   color: #5a6674;
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
 }
 
 button {
@@ -17,14 +22,49 @@ button {
   height: 2em;
 }
 
+#inputBtn {
+  border-radius: 40px;
+  color: white;
+  background-color: #4c96f7;
+  font-size: 16px;
+}
+
 #searchBar {
-  margin: auto;
-  padding: 1.5em;
+  margin-top: 2em;
+  /* padding: 1em; */
+  padding: 1.5em 0.5em 1.5em 1em;
   justify-content: center;
-  max-width: 30em;
+  width: 45%;
+  height: 6em;
   border-radius: 40px;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  /* transform: translate(-50%, -50%); */
   background: #fff;
   transition: all 0.3s ease;
+  height: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#searchBar:focus-within {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+#locationInput {
+  font-size: 16px;
+  background: none;
+  color: #5a6674;
+  outline: none;
+  width: 85%;
+}
+
+input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: #5a6674;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: #5a6674;
 }
