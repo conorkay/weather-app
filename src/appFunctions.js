@@ -66,7 +66,14 @@ export const apiController = (function () {
   function processCurrWeather(data) {
     // Current data
     let name = data.location.name;
-    let region = data.location.region;
+    let region;
+
+    if (data.location.country === 'United States of America') {
+      region = data.location.region;
+    } else {
+      region = data.location.country;
+    }
+
     let condition = data.current.condition;
     let tempC = data.current.temp_c + '\u00B0C';
     let tempF = data.current.temp_f + '\u00B0F';

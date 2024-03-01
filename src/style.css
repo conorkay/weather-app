@@ -111,3 +111,21 @@ input:-webkit-autofill:focus {
   padding: 0 3rem 0 3rem;
   font-size: 28px;
 }
+
+#name {
+  font-size: 36px;
+}
+
+#conditionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+#currWeatherIcon {
+  aspect-ratio: 1 / 1;
+  width: 10rem;
+}
