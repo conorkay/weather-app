@@ -27,7 +27,6 @@ export const displayController = (function () {
     condition.innerText = data.condition.text;
     temp.innerText = data.tempF + '/' + data.tempC;
     windspeed.innerText = 'Windspeed: ' + data.windspeedMPH + ' MPH';
-    // currWeatherIcon.src = 'http:' + data.condition.icon;
     humidity.innerText = 'Humidity: ' + data.humidity + '%';
     feelsLike.innerText =
       'Feels like: ' + data.feelsLikeF + '/' + data.feelsLikeC;
@@ -35,17 +34,13 @@ export const displayController = (function () {
 
     let date = new Date();
     dateSpan.innerText = date.toDateString();
-    console.log('Is day: ' + data.isDay);
     currWeatherIcon.src = getWeatherIcon(data.condition.code, data.isDay);
     setBackground(data.isDay);
   }
 
   function setBackground(isDay) {
-    console.log(dayImage);
-    console.log(nightImage);
     if (isDay) {
       document.body.style.backgroundImage = "url('" + dayImage + "')";
-      console.log(document.body.style);
     } else {
       document.body.style.backgroundImage = "url('" + nightImage + "')";
     }
@@ -104,8 +99,6 @@ export const apiController = (function () {
       'http://api.weatherapi.com/v1/forecast.json?key=822fa6b2bae040daa0502408242702&q=' +
       searchParam +
       '&days=3&aqi=no&alerts=yes';
-
-    console.log(url);
 
     try {
       const response = await fetch(url, { mode: 'cors' });

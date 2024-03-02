@@ -1,11 +1,6 @@
 import './style.css';
 import { displayController, apiController } from './appFunctions';
 
-// apiController.getWeatherData('amherst').then((data) => {
-//   //console.log(data);
-//   console.log(apiController.processCurrWeather(data));
-// });
-
 const searchBar = document.getElementById('searchBar');
 
 searchBar.addEventListener('submit', (event) => {
